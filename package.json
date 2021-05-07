@@ -1,0 +1,30 @@
+{
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "prettier": "^2.2.1"
+  },
+  "name": "dev-team-profile-generator",
+  "version": "1.0.0",
+  "description": "Generates a team profiles webpage",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --watch --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brett-treweek/Dev-Team-Profile-Generator.git"
+  },
+  "author": "Brett Treweek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brett-treweek/Dev-Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/brett-treweek/Dev-Team-Profile-Generator#readme"
+}
