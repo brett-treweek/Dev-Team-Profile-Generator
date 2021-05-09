@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: rgb(14, 12, 12);
+}
+
+.title {
+    font-size: 4rem;
+    background: rgb(14, 12, 12);
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+
+.wrapper {
+    /* height: 100vh; */
+    position: relative;
+    top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    position: relative;
+    flex-basis: 33%;
+    margin-bottom: 3rem;
+    padding: 10rem 0 0;
+    height: 35vh;
+    max-width: 35ch;
+    background-image: url(../assets/images/engineer.jpg);
+    background-position: center center;
+    background-size: cover;
+    border: 3px solid #07273ad5;
+    overflow: hidden;
+    transition: transform 300ms ease;
+    border-radius: 20px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: hsla(0, 0%, 0%, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover .card-content {
+    transform: translateY(0);
+    transition-delay: 400ms;
+}
+
+.card:hover ul > *:not(.name) {
+    opacity: 1;
+    transition-delay: 1000ms;
+}
+
+.card-content ul > *:not(.name) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+.card-content {
+    padding: 1.5rem;
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(0 0% 0% / 0.7) 40%,
+        hsl(0 0% 0% / 1));
+    color: #fff;
+    font-weight: 200;
+    transform: translateY(30%);
+    transition: transform 500ms ease;
+}
+
+.name {
+    font-size: 2rem;
+}
+
+.list {
+    padding: ;
+    list-style: none;
+}
+
+.role {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    /* outline: 1px solid red; */
+    position: relative;
+    width: 70%;
+    font-weight: 300;
+    /* width: max-content; */
+}
+
+.role::after {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    bottom: 0;
+    height: 4px;
+    width: calc(100% + 1.5rem);
+    background: #0145ff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.card:hover .role::after {
+    transform: scaleX(1);
+}
+
+@media(max-width: 940px) {
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 70vw;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+}
+@media(max-width: 940px) {
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 70vw;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+}
