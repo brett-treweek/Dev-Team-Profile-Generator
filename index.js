@@ -29,7 +29,7 @@ inquirer
     
   });
 
-// ----------------Questions Array---------------------
+// ----------------Common Questions Array---------------------
 
 function questionsArray(role) {
   inquirer
@@ -61,11 +61,12 @@ function questionsArray(role) {
 
     ])
     .then((answers) => {
-      
+      // try and get rid of info array, create [i] for employees and push directly into dev team array.
       info = [];
       
       if (role == "Manager") {
         let manager = new Manager(answers.employeeName, answers.employeeId, answers.employeeEmail);
+        console.log(manager);
         info.push(manager);
         info[0].role = role
         managerQuestion();
@@ -196,7 +197,7 @@ function loop(){
   console.log(devTeam)
   console.log(devTeam[1][0].getGitHub())
   console.log(devTeam[0][0].getRole())
- getRole(Engineer)
+  console.log(engineer)
 }
 
 
