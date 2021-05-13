@@ -113,7 +113,7 @@ function managerQuestion() {
         type: "input",
         name: "Office_Number",
         message: "What is the Managers Office Number?",
-        default: "911",
+        default: "1800 911 000",
         validate: (answer) => {
           if (answer.type === NaN) {
             return "Please enter a valid Number";
@@ -163,7 +163,7 @@ function internQuestion() {
         type: "input",
         name: "School",
         message: "What school does the Intern attend?",
-        default: "UWA",
+        default: "University of Western Australia",
       },
     ])
     .then((response) => {
@@ -217,7 +217,7 @@ function generateHtml() {
     const element = devTeam[i];
 
     if (element.role === "Engineer") {
-      extra = `<span>GitHub: <span><a class="extra" href="https://github.com/${element.gitHub}">${element.gitHub}</a>`;
+      extra = `<i id="gitHub" class="fab fa-github"></i><span>  </span><a class="extra" target="_blank" href="https://github.com/${element.gitHub}">${element.gitHub}</a>`;
     } else if (element.role === "Manager") {
       extra = `<li class="extra">Office Number: ${element.officeNumber}</li>`;
     } else {
@@ -246,6 +246,7 @@ function generateHtml() {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="../dist/CSS/style.css">

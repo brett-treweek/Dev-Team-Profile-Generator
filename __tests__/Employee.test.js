@@ -7,12 +7,12 @@ describe("Employee", () => {
     expect(typeof employee).toBe('object');
   });
 
-  it("Name, email, id and role are keys in new Employee", () => {
+  it("Will return true if Name, email, id and role are keys in new Employee", () => {
     const employee = new Employee();
     expect(employee.hasOwnProperty('name') && employee.hasOwnProperty('email') && employee.hasOwnProperty('id') && employee.hasOwnProperty('role')).toBe(true);
   });
 
-  it("Name, email, id and role are undefined if no parameters are given", () => {
+  it("Will return true if Name, email, id and role are undefined if no parameters are given", () => {
     const employee = new Employee();
     expect(employee.name && employee.email && employee.id && employee.role).toBe(undefined);
   });
