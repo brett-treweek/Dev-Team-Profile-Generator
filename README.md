@@ -43,7 +43,7 @@ install jest
 ---
 ## Usage
 
-[Here is a link to a walkthrough](https://drive.google.com/file/d/1LG07zwsB0G4Ae_E2sGQ7sr7RJHtJlWYS/view)
+[Here is a link to a walkthrough](https://drive.google.com/file/d/1kpHY85CmMUQatLOvKuStWze9IqiyJ88n/view)
 
 - Run the app with the following command.   
 
